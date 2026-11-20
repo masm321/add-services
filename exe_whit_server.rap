@@ -1,0 +1,92 @@
+[Project]
+Assembler=masm
+Type=Win64 App
+Description=exe_whit_server
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+调试=1
+[Files]
+1=exe_whit_server.Asm
+2=exe_whit_server.Inc
+3=exe_whit_server.Rc
+4=exe_whit_server.Txt
+[MakeFiles]
+0=exe_whit_server.rap
+1=exe_whit_server.rc
+2=exe_whit_server.asm
+3=exe_whit_server.obj
+4=exe_whit_server.res
+5=exe_whit_server.exe
+6=exe_whit_server.def
+7=exe_whit_server.dll
+8=exe_whit_server.txt
+9=exe_whit_server.lib
+10=exe_whit_server.mak
+11=exe_whit_server.hla
+12=exe_whit_server.com
+[MakeDef]
+Menu=1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0
+1=4,O,$B\RC.EXE /v,1
+2=3,O,$B\ML64.EXE /c /Cp  /Cx /Zi /nologo /I"$I",2
+3=5,O,$B\LINK.EXE  /entry:WinMain /SUBSYSTEM:WINDOWS /MACHINE:X64 /RELEASE /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+6=*.obj,O,$B\ML64.EXE /c /Cp  /Cx /Zi /nologo /I"$I",*.asm
+7=0,0,"$E\OllyDbg",5
+11=4,O,$B\RC.EXE /v,1
+12=3,O,$B\ML64.EXE /c /Cp  /Cx /Zi /nologo /I"$I",2
+13=5,O,$B\LINK.EXE /entry:WinMain /SUBSYSTEM:WINDOWS /MACHINE:X64 /DEBUG:FASTLINK  /RELEASE /VERSION:4.0 /LIBPATH:"$L" /OUT:"$5",3,4
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES.EXE,rsrc.res
+16=*.obj,O,$B\ML64.EXE /c /Cp  /Cx /Zi /nologo /I"$I",*.asm
+17=0,0,"$E\OllyDbg",5
+[Resource]
+[StringTable]
+[Group]
+Group=添加的文件,源文件,资源文件,其他,模块
+1=2
+2=2
+3=3
+4=4
+[Collapse]
+4=
+1=524306,,
+2=
+[Size]
+4=0,0,0,0,0
+1=0,0,0,0,22362
+2=0,0,0,0,5378
+[Find]
+1="rsi"
+2="WinSta0_Default"
+3="winsta0\default"
+4="winsta0\\default"
+5="error_start_baidu_face"
+6="ReadFile"
+7="WriteFile"
+8="close_status"
+9="8884"
+10="OpenProcessToken"
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=

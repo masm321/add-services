@@ -1,0 +1,4 @@
+#include "Res/exe_whit_serverVer.rc"
+#include  "resource.h"
+1 24 "manifest.xml"
+
